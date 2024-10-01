@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-import 'source-map-support/register';
-import * as cdk from 'aws-cdk-lib';
-import { Lab81Stack } from '../lib/lab8-1-stack';
+import "source-map-support/register";
+import * as cdk from "aws-cdk-lib";
+import { MainStack } from "../lib/lab-8-1-main-stack";
 
 const app = new cdk.App();
-new Lab81Stack(app, 'Lab81Stack', {
+new MainStack(app, "MainStack", {
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
    * but a single synthesized template can be deployed anywhere. */
@@ -15,7 +15,7 @@ new Lab81Stack(app, 'Lab81Stack', {
 
   /* Uncomment the next line if you know exactly what Account and Region you
    * want to deploy the stack to. */
-  // env: { account: '123456789012', region: 'us-east-1' },
+  env: { account: "010438468909", region: "us-east-1" },
 
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
 });
